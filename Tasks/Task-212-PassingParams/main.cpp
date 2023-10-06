@@ -15,6 +15,9 @@ int main() {
     ComplexNumber_C sum = complexAdd(p, q);
     complexDisplay("p+q", sum);
 
+    ComplexNumber_C div = complexDivide(p, q);
+    complexDisplay("p/q", div);
+
     
     while (true) {
     }

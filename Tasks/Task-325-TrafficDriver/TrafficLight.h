@@ -12,6 +12,10 @@ class TrafficLight
 {
     public:
     typedef enum {STOP, READY, GO, WARNING} LIGHT_STATE;
+    void stop();
+    void setFlashSpeed(double);
+    double getFlashSpeed();
+
 
     private:
     DigitalOut redLED;

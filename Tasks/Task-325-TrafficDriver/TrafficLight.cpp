@@ -25,6 +25,24 @@ void TrafficLight::yellowFlashISR() {
     yellowLED = !yellowLED;
 }
 
+void TrafficLight :: stop(){
+    
+    redLED = 1;
+    yellowLED = 0;
+    greenLED = 0;
+
+}
+
+void TrafficLight :: setFlashSpeed(double){
+    
+
+    
+    
+    t.attach(callback(this, &TrafficLight::yellowFlashISR), 200ms);
+     
+
+}
+
 // Private member function to switch flasher on or off
 void TrafficLight::flashYellow(bool flash) {
     t.detach(); //Turn off ticker
